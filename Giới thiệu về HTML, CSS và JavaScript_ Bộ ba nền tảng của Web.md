@@ -237,6 +237,8 @@ graph LR
     style Margin fill:#lightcoral,stroke:#333,stroke-width:2px
 ```
 
+![Alt text for the image](https://funix.edu.vn/wp-content/uploads/2022/02/boxmodel.png)
+
 Hiểu rõ Box Model là rất quan trọng để kiểm soát chính xác kích thước và vị trí của các phần tử trên trang.
 
 ### 2.5. CSSOM (CSS Object Model)
