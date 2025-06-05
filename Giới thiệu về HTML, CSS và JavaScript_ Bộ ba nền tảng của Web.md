@@ -111,7 +111,7 @@ Phần tiếp theo, chúng ta sẽ khám phá CSS - công cụ giúp "trang đi�
 
 
 
-## Phần 2: CSS - Khoác áo cho trang web
+## Phần 2: CSS - Lớp make-up của HTML
 
 Nếu HTML tạo nên cấu trúc, thì CSS (Cascading Style Sheets) chính là nghệ sĩ trang điểm, mang lại vẻ đẹp và phong cách cho cấu trúc đó. CSS cho phép bạn kiểm soát mọi khía cạnh về giao diện của trang web, từ màu sắc, phông chữ, kích thước cho đến bố cục và thậm chí cả các hiệu ứng hoạt hình đơn giản.
 
