@@ -8,13 +8,13 @@ Hãy tưởng tượng việc xây dựng một ngôi nhà. Bạn cần một b�
 
 ```mermaid
 graph TD
-    A[Trang Web] --> B(HTML<br>Cấu trúc - Khung nhà);
-    A --> C(CSS<br>Trình bày - Sơn & Trang trí);
-    A --> D(JavaScript<br>Hành vi - Điện & Cửa);
+    A[Trang Web] --> B("HTML Cấu trúc - Khung nhà");
+    A --> C("CSS Trình bày - Sơn & Trang trí");
+    A --> D("JavaScript Hành vi - Điện & Cửa");
 
-    style B fill:#f9f,stroke:#333,stroke-width:2px
-    style C fill:#ccf,stroke:#333,stroke-width:2px
-    style D fill:#ff9,stroke:#333,stroke-width:2px
+    style B color:black,fill:#f9f,stroke:#333,stroke-width:2px
+    style C color:black,fill:#ccf,stroke:#333,stroke-width:2px
+    style D color:black,fill:#ff9,stroke:#333,stroke-width:2px
 ```
 
 Trong bài hướng dẫn này, chúng ta sẽ cùng nhau khám phá:
@@ -251,30 +251,30 @@ Trình duyệt sau đó kết hợp DOM và CSSOM để tạo ra **Render Tree**
 graph LR
     subgraph "Luồng xử lý của trình duyệt"
         direction TB
-        A(Trình duyệt<br>yêu cầu trang) --> B(Tải HTML);
-        B --> C{Phân tích HTML<br>(Tạo DOM)};
-        C --> E(Tải CSS);
-        E --> F{Phân tích CSS<br>(Tạo CSSOM)};
+        A["Trình duyệt yêu cầu trang"] --> B["Tải HTML"];
+        B --> C["Phân tích HTML (Tạo DOM)"];
+        C --> E["Tải CSS"];
+        E --> F["Phân tích CSS (Tạo CSSOM)"];
         subgraph "JavaScript Engine"
             direction TB
-            JS1(Tải JS) --> JS2(Thực thi JS);
+            JS1["Tải JS"] --> JS2["Thực thi JS"];
         end
         C --> JS1;
         F --> JS1;
-        JS2 -- Sửa đổi --> C;
-        JS2 -- Sửa đổi --> F;
-        F --> G{Kết hợp DOM & CSSOM<br>(Tạo Render Tree)};
-        G --> H(Bố cục<br>Layout);
-        H --> I(Vẽ<br>Paint);
+        JS2 -- "Sửa đổi" --> C;
+        JS2 -- "Sửa đổi" --> F;
+        F --> G["Kết hợp DOM & CSSOM (Tạo Render Tree)"];
+        G --> H["Bố cục Layout"];
+        H --> I["Vẽ Paint"];
     end
 
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style F fill:#ccf,stroke:#333,stroke-width:2px
-    style JS1 fill:#ff9,stroke:#333,stroke-width:2px
-    style JS2 fill:#ff9,stroke:#333,stroke-width:2px
-    style G fill:#9cf,stroke:#333,stroke-width:2px
-    style H fill:#9fc,stroke:#333,stroke-width:2px
-    style I fill:#fc9,stroke:#333,stroke-width:2px
+    style C color:black,fill:#f9f,stroke:#333,stroke-width:2px
+    style F color:black,fill:#ccf,stroke:#333,stroke-width:2px
+    style JS1 color:black,fill:#ff9,stroke:#333,stroke-width:2px
+    style JS2 color:black,fill:#ff9,stroke:#333,stroke-width:2px
+    style G color:black,fill:#9cf,stroke:#333,stroke-width:2px
+    style H color:black,fill:#9fc,stroke:#333,stroke-width:2px
+    style I color:black,fill:#fc9,stroke:#333,stroke-width:2px
 ```
 
 CSSOM cũng có thể được truy cập và thay đổi bằng JavaScript, cho phép tạo ra các hiệu ứng động và thay đổi kiểu dáng trang web một cách linh hoạt.
@@ -320,7 +320,7 @@ Tương tự CSS, có ba cách chính:
             alert('Xin chào từ file JS!');
         }
         ```
-    *   **File `index.html` (thường đặt trước thẻ đóng `</body>`):**
+    *   **File `index.html` (script.js thường đặt trước thẻ đóng `</body>`):**
         ```html
         <body>
             <!-- Nội dung HTML -->
